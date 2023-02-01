@@ -34,3 +34,4 @@ class CryptoPaymentController extends Controller
         ],200);
     }
 }
+            
