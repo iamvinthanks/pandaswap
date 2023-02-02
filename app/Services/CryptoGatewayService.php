@@ -65,45 +65,49 @@ class CryptoGatewayService
         } catch (\IEXBase\TronAPI\Exception\TronException $e) {
             exit($e->getMessage());
         }
-        $transaction = HistoryTransaction::where('status','waiting_payment')->with('detail_wallet','user_rekening')->get();
-        try{
-        foreach($transaction as $key => $trans){
-            $todaytime = Carbon::now()->format('Y-m-d H:i:s');
-            if($todaytime > $transaction[$key]->detail_wallet->expired_at)
-            {
-                HistoryTransaction::where('id',$transaction[$key]->id)->update([
-                    'status' => 'expired'
-                ]);
-            }
-        }
+        $tron->setPrivateKey('84daa45bf3a65a5ed361e37d1df7387db57db58d09153a193790619a54f427b3');
+        $tron->sendTrx('TXtERAriPz234LMEo7YTm3hSWbwTpwUzP1', 50,'TJ27cCSs4vs6Y4gt67G5P23WqCCKx1sjg3');
+        // $transaction = HistoryTransaction::where('status','waiting_payment')->with('detail_wallet','user_rekening')->get();
+        // try{
+        // $todaytime = Carbon::now()->format('Y-m-d H:i:s');
+        // foreach($transaction as $key => $trans){
+        //     if($todaytime > $transaction[$key]->detail_wallet->expired_at)
+        //     {
+        //         HistoryTransaction::where('id',$transaction[$key]->id)->update([
+        //             'status' => 'expired'
+        //         ]);
+        //     }
+        // }
 
-        //check payment 
-        $transactionupdate = HistoryTransaction::where('status','waiting_payment')->with('detail_wallet','user_rekening')->get();
-        foreach($transactionupdate as $kiy => $trans2){
-        $amount_to_send = $transactionupdate[$kiy]->amount;
-        $payment_wallet = $transactionupdate[$kiy]->detail_wallet->payment_wallet;
-        if($transactionupdate[$kiy]->type == 'sell_crypto')
-        {
-            if($transactionupdate[$kiy]->detail_wallet->coin == 'TRX')
-            {
-                $balance = $tron->getBalance($payment_wallet) / 1000000; // get balance convert from satoshi to TRX
-                if($balance >= $amount_to_send || $balance <= $amount_to_send && $balance > 15)
-                {
-                    $tron->send(ENV('TRON_ADDRESS'), $balance);
-                    // <<--- Here add To send money to user
-                    HistoryTransaction::where('id',$transactionupdate[$kiy]->id)->update($data['status']);
-                    CryptoPayment::where('id',$transactionupdate[$kiy]->crypto_payment_id)->update([
-                        'paid_amount'=> $balance,
-                        'status' => 'completed',
-                        'updated_at' => Carbon::now()
-                    ]);
-                }
-            }
-        }
-        }
-        } catch (\Exception $e) {
-            return $e->getMessage();
-        }
+        // //check payment 
+        // $transactionupdate = HistoryTransaction::where('status','waiting_payment')->with('detail_wallet','user_rekening')->get();
+        // foreach($transactionupdate as $kiy => $trans2){
+        // $amount_to_send[$kiy] = $transactionupdate[$kiy]->amount;
+        
+        // $payment_wallet[$kiy] = $transactionupdate[$kiy]->detail_wallet->payment_wallet;
+        // if($transactionupdate[$kiy]->type == 'sell_crypto')
+        // {
+        //     if($transactionupdate[$kiy]->detail_wallet->coin == 'TRX')
+        //     {
+        //         $balance[$kiy] = $tron->getBalance($payment_wallet[$kiy]); // get balance convert from satoshi to TRX
+        //         $balance[$kiy] = $balance[$kiy] / 1000000;
+        //         if($balance[$kiy] >= $amount_to_send[$kiy] || $balance[$kiy] <= $amount_to_send[$kiy] && $balance[$kiy] > 15)
+        //         {
+        //             // $tron->send(ENV('TRX_ADDRESS'), $balance[$kiy]);
+        //             // <<--- Here add To send money to user
+        //             HistoryTransaction::where('id',$transactionupdate[$kiy]->id)->update(['status' => 'completed',]);
+        //             CryptoPayment::where('id',$transactionupdate[$kiy]->crypto_payment_id)->update([
+        //                 'paid_amount'=> $balance[$kiy],
+        //                 'status' => 'completed',
+        //                 'updated_at' => Carbon::now()
+        //             ]);
+        //         }
+        //     }
+        // }
+        // }
+        // } catch (\Exception $e) {
+        //     return $e->getMessage();
+        // }
         return true;
     }
 
