@@ -13,7 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('flat_payments', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('user_id');
+            $table->string('recipient', 100);
+            $table->string('amount', 30);
+            $table->string('coin', 100);
+            $table->enum('type', ['direct','giftcard']);
+            $table->timestamps();
+            $table->softDeletes();
+        });
     }
 
     /**

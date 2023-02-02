@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('CryptoPayment', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned();
-            $table->string('payment_wallet', 42);
-            $table->string('private_key', 66);
+            $table->string('payment_wallet', 42)->nullable();
+            $table->string('private_key', 66)->nullable();
             $table->string('amount', 100);
             $table->enum('coin', ['TRX','USDT']);
             $table->string('paid_amount', 100)->nullable();

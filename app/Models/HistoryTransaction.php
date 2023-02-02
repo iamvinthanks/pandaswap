@@ -30,4 +30,12 @@ class HistoryTransaction extends Model
     {
         return $this->hasOne('App\Models\CryptoPayment', 'id', 'crypto_payment_id')->select('id', 'user_id', 'payment_wallet', 'amount', 'payout_tx', 'coin', 'expired_at','status');
     }
+    public function detail_wallet()
+    {
+        return $this->hasOne('App\Models\CryptoPayment', 'id', 'crypto_payment_id')->select('id', 'user_id', 'payment_wallet','private_key','amount', 'payout_tx', 'coin', 'expired_at','status');
+    }
+    public function user_rekening()
+    {
+        return $this->hasOne('App\Models\UserRekening', 'id', 'recipient_id')->select('id', 'user_id', 'bank_code', 'bank_number', 'bank_name');
+    }
 }
