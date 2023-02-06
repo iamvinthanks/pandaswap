@@ -27,8 +27,8 @@ class TransactionCheck extends Command
      */
     public function handle()
     {
-        // \Log::info('Transaction Check Running');
-        // [App\Http\Controllers\Api\CryptoPaymentController::class, 'CheckBill'];
+        \Log::info('Transaction Check Running');
+        [App\Http\Controllers\Api\CryptoPaymentController::class, 'CheckBill'];
         return Command::SUCCESS;
     }
 }
