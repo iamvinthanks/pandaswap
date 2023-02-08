@@ -52,7 +52,7 @@ class CryptoGatewayService
             DB::rollback();
             return $e->getMessage();
         }
-        
+
         return $storeHistory->id;
     }
     public function Check()
@@ -65,14 +65,18 @@ class CryptoGatewayService
         } catch (\IEXBase\TronAPI\Exception\TronException $e) {
             exit($e->getMessage());
         }
+        $tron->setPrivateKey("5ea5c571adf3de837265ec86ff0c7fa0f8acadbc141a9f24cc312738e0c1c07b");
+        $tron->setAddress("TRqN3V1GboCaShMYhzAvgx5XbCMPoenocn");
+        $test = $tron->getTokenbalance(1000501, "TRqN3V1GboCaShMYhzAvgx5XbCMPoenocn");
+        dd($test);
+        $tron->sendToken("TXtERAriPz234LMEo7YTm3hSWbwTpwUzP1",20,1000501);
         $transaction = HistoryTransaction::where('status','waiting_payment')->with('detail_wallet','user_rekening')->get();
         try{
         $todaytime = Carbon::now()->format('Y-m-d H:i:s');
-        //check payment 
+        //check payment
         $transactionupdate = HistoryTransaction::where('status','waiting_payment')->with('detail_wallet','user_rekening')->get();
         foreach($transactionupdate as $kiy => $trans2){
         $amount_to_send[$kiy] = $transactionupdate[$kiy]->amount;
-        
         $payment_wallet[$kiy] = $transactionupdate[$kiy]->detail_wallet->payment_wallet;
         $pk_wallet[$kiy] = $transactionupdate[$kiy]->detail_wallet->private_key;
         if($transactionupdate[$kiy]->type == 'sell_crypto')

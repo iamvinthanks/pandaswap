@@ -21,6 +21,7 @@ Route::get('/unauthenticated', function () {
 })->name('api.unauthenticated');
 Route::post('/login', [App\Http\Controllers\Api\AuthController::class, 'login']);
 Route::post('/register', [App\Http\Controllers\Api\AuthController::class, 'register']);
+Route::post('/crypto-payment/check', [App\Http\Controllers\Api\CryptoPaymentController::class, 'CheckBill']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/logout', [App\Http\Controllers\Api\AuthController::class, 'logout']);
@@ -31,7 +32,6 @@ Route::middleware('auth:sanctum')->group(function () {
 
     // Crypto Payment
     Route::post('/crypto-payment/create', [App\Http\Controllers\Api\CryptoPaymentController::class, 'CreateBill']);
-    // Route::post('/crypto-payment/check', [App\Http\Controllers\Api\CryptoPaymentController::class, 'CheckBill']);
 
     // Escrow
     Route::post('/createescrow', 'App\Http\Controllers\Api\EscrowController@createescrow');
