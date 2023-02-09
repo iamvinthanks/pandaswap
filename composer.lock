@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f312f37fa2ca7d13604770135eb43625",
+    "content-hash": "e2b4c1aa72b1115af487d5e00d7b472c",
     "packages": [
         {
             "name": "brick/math",
@@ -479,6 +479,139 @@
                 }
             ],
             "time": "2023-01-14T14:17:03+00:00"
+        },
+        {
+            "name": "fenguoz/bip39-mnemonic-php",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Fenguoz/bip39-mnemonic-php.git",
+                "reference": "5c1b0fed8d7d5c07415576c980be9a65468048ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Fenguoz/bip39-mnemonic-php/zipball/5c1b0fed8d7d5c07415576c980be9a65468048ad",
+                "reference": "5c1b0fed8d7d5c07415576c980be9a65468048ad",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": ">=8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FurqanSiddiqui\\BIP39\\": [
+                        "src"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "BIP39 Mnemonics implementation in PHP",
+            "keywords": [
+                "BIP-0039",
+                "bip39",
+                "mnemonics"
+            ],
+            "support": {
+                "source": "https://github.com/Fenguoz/bip39-mnemonic-php/tree/1.2.0"
+            },
+            "time": "2023-02-09T02:20:12+00:00"
+        },
+        {
+            "name": "fenguoz/bsc-php",
+            "version": "dev-guzzle-version",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pemulungtoken/bsc-php.git",
+                "reference": "9e9384cdec1d7875165be856cc6f07341788943c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pemulungtoken/bsc-php/zipball/9e9384cdec1d7875165be856cc6f07341788943c",
+                "reference": "9e9384cdec1d7875165be856cc6f07341788943c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-bcmath": "*",
+                "ext-gmp": "*",
+                "ext-json": "*",
+                "ext-openssl": "*",
+                "fenguoz/bip39-mnemonic-php": "~1.2.0",
+                "fenguoz/minter-php-bip-44": "~1.0",
+                "guzzlehttp/guzzle": "~7.0",
+                "ionux/phactor": "1.0.8",
+                "kornrunner/keccak": "^1.0",
+                "php": ">=8.0",
+                "phpseclib/phpseclib": "~2.0.11",
+                "sop/asn1": "^3.3",
+                "sop/crypto-encoding": "^0.2.0",
+                "sop/crypto-types": "^0.2.1",
+                "web3p/ethereum-tx": "^0.4.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Binance\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fenguoz",
+                    "email": "243944672@qq.com"
+                }
+            ],
+            "description": "Support Binance's BNB and BEP20, which include functions such as address creation, balance query, transaction transfer, query the latest blockchain, query information based on the blockchain, and query information based on the transaction hash",
+            "homepage": "https://github.com/Fenguoz/bsc-php",
+            "keywords": [
+                "bep20",
+                "binance",
+                "bnb",
+                "php"
+            ],
+            "support": {
+                "source": "https://github.com/pemulungtoken/bsc-php/tree/guzzle-version"
+            },
+            "time": "2023-02-09T07:46:48+00:00"
+        },
+        {
+            "name": "fenguoz/minter-php-bip-44",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Fenguoz/minter-php-bip-44.git",
+                "reference": "5ea2e37c908cb485fda043f05e38c627d4608050"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Fenguoz/minter-php-bip-44/zipball/5ea2e37c908cb485fda043f05e38c627d4608050",
+                "reference": "5ea2e37c908cb485fda043f05e38c627d4608050",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2",
+                "simplito/elliptic-php": "1.0.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~7.5 || ~9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "BIP\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "support": {
+                "source": "https://github.com/Fenguoz/minter-php-bip-44/tree/1.0"
+            },
+            "time": "2023-02-08T09:16:25+00:00"
         },
         {
             "name": "fgrosse/phpasn1",
@@ -1021,6 +1154,90 @@
             "time": "2022-10-26T14:07:24+00:00"
         },
         {
+            "name": "guzzlehttp/uri-template",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/uri-template.git",
+                "reference": "b945d74a55a25a949158444f09ec0d3c120d69e2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/uri-template/zipball/b945d74a55a25a949158444f09ec0d3c120d69e2",
+                "reference": "b945d74a55a25a949158444f09ec0d3c120d69e2",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5 || ^8.0",
+                "symfony/polyfill-php80": "^1.17"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5.19 || ^9.5.8",
+                "uri-template/tests": "1.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\UriTemplate\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "George Mponos",
+                    "email": "gmponos@gmail.com",
+                    "homepage": "https://github.com/gmponos"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                }
+            ],
+            "description": "A polyfill class for uri_template of PHP",
+            "keywords": [
+                "guzzlehttp",
+                "uri-template"
+            ],
+            "support": {
+                "issues": "https://github.com/guzzle/uri-template/issues",
+                "source": "https://github.com/guzzle/uri-template/tree/v1.0.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/uri-template",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-10-07T12:57:01+00:00"
+        },
+        {
             "name": "iexbase/tron-api",
             "version": "v5.0",
             "source": {
@@ -1117,6 +1334,104 @@
                 "source": "https://github.com/iexbase/web3.php/tree/2.0.1"
             },
             "time": "2020-10-15T18:16:13+00:00"
+        },
+        {
+            "name": "ionux/phactor",
+            "version": "v1.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ionux/phactor.git",
+                "reference": "271373b65cffe75a8c28f7f8c392fe460251f4f7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ionux/phactor/zipball/271373b65cffe75a8c28f7f8c392fe460251f4f7",
+                "reference": "271373b65cffe75a8c28f7f8c392fe460251f4f7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-bcmath": "*",
+                "ext-openssl": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7.9"
+            },
+            "suggest": {
+                "ext-gmp": "Highest performing math library and preferred for this library's Elliptic Curve calculations."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phactor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rich Morgan",
+                    "email": "rich@richmorgan.me",
+                    "role": "Creator and Lead Developer"
+                }
+            ],
+            "description": "Phactor is a high-performance PHP implementation of the elliptic curve math functions required to generate & verify private/public (asymmetric) EC keypairs and ECDSA signatures based on secp256k1 curve parameters. This library also includes a class to generate Service Identification Numbers (SINs) based on the published Identity Protocol v1 spec.",
+            "homepage": "https://github.com/ionux/phactor",
+            "keywords": [
+                "Algorithm",
+                "BIP",
+                "ECDSA",
+                "SIN",
+                "arbitrary",
+                "asymmetric",
+                "base",
+                "base58",
+                "bcmath",
+                "binary",
+                "bitcoin",
+                "calculator",
+                "coprime",
+                "crypto",
+                "cryptography",
+                "curve",
+                "digital",
+                "dsa",
+                "ec",
+                "elliptic",
+                "encryption",
+                "generate",
+                "gmp",
+                "hex",
+                "identification",
+                "identity",
+                "integer",
+                "key",
+                "keygen",
+                "keypair",
+                "keys",
+                "library",
+                "math",
+                "number",
+                "performance",
+                "phactor",
+                "precision",
+                "prime",
+                "private",
+                "protocol",
+                "public",
+                "secp256k1",
+                "service",
+                "signature",
+                "verify"
+            ],
+            "support": {
+                "email": "rich@richmorgan.me",
+                "issues": "https://github.com/ionux/phactor/issues",
+                "source": "https://github.com/ionux/phactor"
+            },
+            "time": "2018-04-27T16:49:28+00:00"
         },
         {
             "name": "kornrunner/keccak",
@@ -1219,16 +1534,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.50.1",
+            "version": "v9.51.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "3b400f76619cd5257a69fdd6b897043b6522a89a"
+                "reference": "b81123134349a013a738a9f7f715c6ce99d5a414"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/3b400f76619cd5257a69fdd6b897043b6522a89a",
-                "reference": "3b400f76619cd5257a69fdd6b897043b6522a89a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/b81123134349a013a738a9f7f715c6ce99d5a414",
+                "reference": "b81123134349a013a738a9f7f715c6ce99d5a414",
                 "shasum": ""
             },
             "require": {
@@ -1236,9 +1551,15 @@
                 "doctrine/inflector": "^2.0.5",
                 "dragonmantank/cron-expression": "^3.3.2",
                 "egulias/email-validator": "^3.2.1|^4.0",
+                "ext-ctype": "*",
+                "ext-filter": "*",
+                "ext-hash": "*",
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
+                "ext-session": "*",
+                "ext-tokenizer": "*",
                 "fruitcake/php-cors": "^1.2",
+                "guzzlehttp/uri-template": "^1.0",
                 "laravel/serializable-closure": "^1.2.2",
                 "league/commonmark": "^2.2.1",
                 "league/flysystem": "^3.8.0",
@@ -1310,6 +1631,7 @@
                 "ably/ably-php": "^1.0",
                 "aws/aws-sdk-php": "^3.235.5",
                 "doctrine/dbal": "^2.13.3|^3.1.4",
+                "ext-gmp": "*",
                 "fakerphp/faker": "^1.21",
                 "guzzlehttp/guzzle": "^7.5",
                 "league/flysystem-aws-s3-v3": "^3.0",
@@ -1332,10 +1654,13 @@
                 "aws/aws-sdk-php": "Required to use the SQS queue driver, DynamoDb failed job storage, and SES mail driver (^3.235.5).",
                 "brianium/paratest": "Required to run tests in parallel (^6.0).",
                 "doctrine/dbal": "Required to rename columns and drop SQLite columns (^2.13.3|^3.1.4).",
+                "ext-apcu": "Required to use the APC cache driver.",
+                "ext-fileinfo": "Required to use the Filesystem class.",
                 "ext-ftp": "Required to use the Flysystem FTP driver.",
                 "ext-gd": "Required to use Illuminate\\Http\\Testing\\FileFactory::image().",
                 "ext-memcached": "Required to use the memcache cache driver.",
-                "ext-pcntl": "Required to use all features of the queue worker.",
+                "ext-pcntl": "Required to use all features of the queue worker and console signal trapping.",
+                "ext-pdo": "Required to use all database features.",
                 "ext-posix": "Required to use all features of the queue worker.",
                 "ext-redis": "Required to use the Redis cache and queue drivers (^4.0|^5.0).",
                 "fakerphp/faker": "Required to use the eloquent factory builder (^1.9.1).",
@@ -1403,7 +1728,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2023-02-01T17:36:26+00:00"
+            "time": "2023-02-07T15:37:18+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -2011,16 +2336,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.8.0",
+            "version": "2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "720488632c590286b88b80e62aa3d3d551ad4a50"
+                "reference": "f259e2b15fb95494c83f52d3caad003bbf5ffaa1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/720488632c590286b88b80e62aa3d3d551ad4a50",
-                "reference": "720488632c590286b88b80e62aa3d3d551ad4a50",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/f259e2b15fb95494c83f52d3caad003bbf5ffaa1",
+                "reference": "f259e2b15fb95494c83f52d3caad003bbf5ffaa1",
                 "shasum": ""
             },
             "require": {
@@ -2035,7 +2360,7 @@
                 "doctrine/couchdb": "~1.0@dev",
                 "elasticsearch/elasticsearch": "^7 || ^8",
                 "ext-json": "*",
-                "graylog2/gelf-php": "^1.4.2",
+                "graylog2/gelf-php": "^1.4.2 || ^2@dev",
                 "guzzlehttp/guzzle": "^7.4",
                 "guzzlehttp/psr7": "^2.2",
                 "mongodb/mongodb": "^1.8",
@@ -2097,7 +2422,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.8.0"
+                "source": "https://github.com/Seldaek/monolog/tree/2.9.1"
             },
             "funding": [
                 {
@@ -2109,7 +2434,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-07-24T11:55:47+00:00"
+            "time": "2023-02-06T13:44:46+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2277,29 +2602,30 @@
         },
         {
             "name": "nette/utils",
-            "version": "v3.2.9",
+            "version": "v4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "c91bac3470c34b2ecd5400f6e6fdf0b64a836a5c"
+                "reference": "cacdbf5a91a657ede665c541eda28941d4b09c1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/c91bac3470c34b2ecd5400f6e6fdf0b64a836a5c",
-                "reference": "c91bac3470c34b2ecd5400f6e6fdf0b64a836a5c",
+                "url": "https://api.github.com/repos/nette/utils/zipball/cacdbf5a91a657ede665c541eda28941d4b09c1e",
+                "reference": "cacdbf5a91a657ede665c541eda28941d4b09c1e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.2 <8.3"
+                "php": ">=8.0 <8.3"
             },
             "conflict": {
-                "nette/di": "<3.0.6"
+                "nette/finder": "<3",
+                "nette/schema": "<1.2.2"
             },
             "require-dev": {
                 "jetbrains/phpstorm-attributes": "dev-master",
-                "nette/tester": "~2.0",
+                "nette/tester": "^2.4",
                 "phpstan/phpstan": "^1.0",
-                "tracy/tracy": "^2.3"
+                "tracy/tracy": "^2.9"
             },
             "suggest": {
                 "ext-gd": "to use Image",
@@ -2313,7 +2639,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "4.0-dev"
                 }
             },
             "autoload": {
@@ -2357,9 +2683,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v3.2.9"
+                "source": "https://github.com/nette/utils/tree/v4.0.0"
             },
-            "time": "2023-01-18T03:26:20+00:00"
+            "time": "2023-02-02T10:41:53+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -2419,16 +2745,16 @@
         },
         {
             "name": "nunomaduro/termwind",
-            "version": "v1.15.0",
+            "version": "v1.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nunomaduro/termwind.git",
-                "reference": "594ab862396c16ead000de0c3c38f4a5cbe1938d"
+                "reference": "8ab0b32c8caa4a2e09700ea32925441385e4a5dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nunomaduro/termwind/zipball/594ab862396c16ead000de0c3c38f4a5cbe1938d",
-                "reference": "594ab862396c16ead000de0c3c38f4a5cbe1938d",
+                "url": "https://api.github.com/repos/nunomaduro/termwind/zipball/8ab0b32c8caa4a2e09700ea32925441385e4a5dc",
+                "reference": "8ab0b32c8caa4a2e09700ea32925441385e4a5dc",
                 "shasum": ""
             },
             "require": {
@@ -2485,7 +2811,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nunomaduro/termwind/issues",
-                "source": "https://github.com/nunomaduro/termwind/tree/v1.15.0"
+                "source": "https://github.com/nunomaduro/termwind/tree/v1.15.1"
             },
             "funding": [
                 {
@@ -2501,7 +2827,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-20T19:00:15+00:00"
+            "time": "2023-02-08T01:06:31+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -3437,16 +3763,16 @@
         },
         {
             "name": "simplito/elliptic-php",
-            "version": "1.0.10",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/simplito/elliptic-php.git",
-                "reference": "a6228f480c729cf8efe2650a617c8500e981716d"
+                "reference": "15652609aa55968d56685c2a9120535ccdc00fd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/simplito/elliptic-php/zipball/a6228f480c729cf8efe2650a617c8500e981716d",
-                "reference": "a6228f480c729cf8efe2650a617c8500e981716d",
+                "url": "https://api.github.com/repos/simplito/elliptic-php/zipball/15652609aa55968d56685c2a9120535ccdc00fd9",
+                "reference": "15652609aa55968d56685c2a9120535ccdc00fd9",
                 "shasum": ""
             },
             "require": {
@@ -3483,7 +3809,6 @@
                 "EdDSA",
                 "cryptography",
                 "curve",
-                "curve25519-weier",
                 "ecc",
                 "ecdh",
                 "elliptic",
@@ -3496,9 +3821,172 @@
             ],
             "support": {
                 "issues": "https://github.com/simplito/elliptic-php/issues",
-                "source": "https://github.com/simplito/elliptic-php/tree/1.0.10"
+                "source": "https://github.com/simplito/elliptic-php/tree/1.0.6"
             },
-            "time": "2022-08-12T19:00:25+00:00"
+            "time": "2019-11-14T13:43:07+00:00"
+        },
+        {
+            "name": "sop/asn1",
+            "version": "3.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sop/asn1.git",
+                "reference": "bf86e8e273729fb5a5c78a808a227c91a9d54115"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sop/asn1/zipball/bf86e8e273729fb5a5c78a808a227c91a9d54115",
+                "reference": "bf86e8e273729fb5a5c78a808a227c91a9d54115",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gmp": "*",
+                "ext-mbstring": "*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ASN1\\": "lib/ASN1/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joni Eskelinen",
+                    "email": "jonieske@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP library for X.690 ASN.1 DER encoding and decoding.",
+            "homepage": "https://github.com/sop/asn1",
+            "keywords": [
+                "DER",
+                "asn.1",
+                "asn1",
+                "x.690",
+                "x690"
+            ],
+            "support": {
+                "issues": "https://github.com/sop/asn1/issues",
+                "source": "https://github.com/sop/asn1/tree/php70"
+            },
+            "time": "2019-05-20T07:28:17+00:00"
+        },
+        {
+            "name": "sop/crypto-encoding",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sop/crypto-encoding.git",
+                "reference": "b5958cc213d3092cb9fa7be179adf760a8fde1f6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sop/crypto-encoding/zipball/b5958cc213d3092cb9fa7be179adf760a8fde1f6",
+                "reference": "b5958cc213d3092cb9fa7be179adf760a8fde1f6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sop\\CryptoEncoding\\": "lib/CryptoEncoding"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joni Eskelinen",
+                    "email": "jonieske@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP implementation of textual encodings of cryptographic structures.",
+            "homepage": "https://github.com/sop/crypto-encoding",
+            "keywords": [
+                "Private Key",
+                "certificate",
+                "pem",
+                "public key"
+            ],
+            "support": {
+                "issues": "https://github.com/sop/crypto-encoding/issues",
+                "source": "https://github.com/sop/crypto-encoding/tree/master"
+            },
+            "time": "2017-11-03T11:35:37+00:00"
+        },
+        {
+            "name": "sop/crypto-types",
+            "version": "0.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sop/crypto-types.git",
+                "reference": "1d36250a110b07300aeb003a20aeaadfc6445501"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sop/crypto-types/zipball/1d36250a110b07300aeb003a20aeaadfc6445501",
+                "reference": "1d36250a110b07300aeb003a20aeaadfc6445501",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gmp": "*",
+                "php": ">=7.0",
+                "sop/asn1": "^3.2.0",
+                "sop/crypto-encoding": "^0.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sop\\CryptoTypes\\": "lib/CryptoTypes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joni Eskelinen",
+                    "email": "jonieske@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP library of various ASN.1 types for cryptographic applications.",
+            "homepage": "https://github.com/sop/crypto-types",
+            "keywords": [
+                "Private Key",
+                "algorithm identifier",
+                "asn1",
+                "cryptography",
+                "ec",
+                "public key",
+                "rsa",
+                "signature"
+            ],
+            "support": {
+                "issues": "https://github.com/sop/crypto-types/issues",
+                "source": "https://github.com/sop/crypto-types/tree/master"
+            },
+            "time": "2017-11-08T09:15:14+00:00"
         },
         {
             "name": "symfony/console",
@@ -5907,6 +6395,143 @@
             "time": "2022-03-08T17:03:00+00:00"
         },
         {
+            "name": "web3p/ethereum-tx",
+            "version": "0.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web3p/ethereum-tx.git",
+                "reference": "8dc1adc10ae45ac440c43ac32a3c5adf63ed8cef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/web3p/ethereum-tx/zipball/8dc1adc10ae45ac440c43ac32a3c5adf63ed8cef",
+                "reference": "8dc1adc10ae45ac440c43ac32a3c5adf63ed8cef",
+                "shasum": ""
+            },
+            "require": {
+                "kornrunner/keccak": "~1",
+                "php": "^7.1|^8.0",
+                "simplito/elliptic-php": "~1.0.6",
+                "web3p/ethereum-util": "~0.1.3",
+                "web3p/rlp": "0.3.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~7|~8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Web3p\\EthereumTx\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "sc0Vu",
+                    "email": "alk03073135@gmail.com"
+                }
+            ],
+            "description": "Ethereum transaction library in PHP.",
+            "support": {
+                "issues": "https://github.com/web3p/ethereum-tx/issues",
+                "source": "https://github.com/web3p/ethereum-tx/tree/0.4.3"
+            },
+            "time": "2021-09-01T05:13:20+00:00"
+        },
+        {
+            "name": "web3p/ethereum-util",
+            "version": "0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web3p/ethereum-util.git",
+                "reference": "9a01f5389835d4092d338bb7b7d119017052ca68"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/web3p/ethereum-util/zipball/9a01f5389835d4092d338bb7b7d119017052ca68",
+                "reference": "9a01f5389835d4092d338bb7b7d119017052ca68",
+                "shasum": ""
+            },
+            "require": {
+                "kornrunner/keccak": "~1",
+                "php": "^7.1 | ^8.0",
+                "phpseclib/phpseclib": "~2.0",
+                "simplito/elliptic-php": "~1.0.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~7 | ~8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Web3p\\EthereumUtil\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "sc0Vu",
+                    "email": "alk03073135@gmail.com"
+                }
+            ],
+            "description": "A collection of utility functions for Ethereum written in PHP.",
+            "support": {
+                "issues": "https://github.com/web3p/ethereum-util/issues",
+                "source": "https://github.com/web3p/ethereum-util/tree/0.1.4"
+            },
+            "time": "2022-12-18T05:42:39+00:00"
+        },
+        {
+            "name": "web3p/rlp",
+            "version": "0.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web3p/rlp.git",
+                "reference": "1653af23142863b490bdf22c6d0335bdb588c983"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/web3p/rlp/zipball/1653af23142863b490bdf22c6d0335bdb588c983",
+                "reference": "1653af23142863b490bdf22c6d0335bdb588c983",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "php": "^7.1 | ^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~7|~8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Web3p\\RLP\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "sc0Vu",
+                    "email": "alk03073135@gmail.com"
+                }
+            ],
+            "description": "Recursive Length Prefix Encoding in PHP.",
+            "support": {
+                "issues": "https://github.com/web3p/rlp/issues",
+                "source": "https://github.com/web3p/rlp/tree/0.3.4"
+            },
+            "time": "2021-08-30T10:22:03+00:00"
+        },
+        {
             "name": "webmozart/assert",
             "version": "1.11.0",
             "source": {
@@ -6294,23 +6919,24 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.19.0",
+            "version": "v1.20.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "4f230634a3163f3442def6a4e6ffdb02b02e14d6"
+                "reference": "4b85dbfa3dceeaf7227e3029707562fd60297e86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/4f230634a3163f3442def6a4e6ffdb02b02e14d6",
-                "reference": "4f230634a3163f3442def6a4e6ffdb02b02e14d6",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/4b85dbfa3dceeaf7227e3029707562fd60297e86",
+                "reference": "4b85dbfa3dceeaf7227e3029707562fd60297e86",
                 "shasum": ""
             },
             "require": {
                 "illuminate/console": "^8.0|^9.0|^10.0",
                 "illuminate/contracts": "^8.0|^9.0|^10.0",
                 "illuminate/support": "^8.0|^9.0|^10.0",
-                "php": "^7.3|^8.0"
+                "php": "^7.3|^8.0",
+                "symfony/yaml": "^6.0"
             },
             "bin": [
                 "bin/sail"
@@ -6350,7 +6976,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2023-01-31T13:37:57+00:00"
+            "time": "2023-02-08T02:08:37+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -7002,16 +7628,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.28",
+            "version": "9.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "954ca3113a03bf780d22f07bf055d883ee04b65e"
+                "reference": "e7b1615e3e887d6c719121c6d4a44b0ab9645555"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/954ca3113a03bf780d22f07bf055d883ee04b65e",
-                "reference": "954ca3113a03bf780d22f07bf055d883ee04b65e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e7b1615e3e887d6c719121c6d4a44b0ab9645555",
+                "reference": "e7b1615e3e887d6c719121c6d4a44b0ab9645555",
                 "shasum": ""
             },
             "require": {
@@ -7053,7 +7679,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "9.5-dev"
+                    "dev-master": "9.6-dev"
                 }
             },
             "autoload": {
@@ -7084,7 +7710,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.28"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.3"
             },
             "funding": [
                 {
@@ -7100,7 +7726,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-01-14T12:32:24+00:00"
+            "time": "2023-02-04T13:37:15+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -7468,16 +8094,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "5.1.4",
+            "version": "5.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "1b5dff7bb151a4db11d49d90e5408e4e938270f7"
+                "reference": "830c43a844f1f8d5b7a1f6d6076b784454d8b7ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/1b5dff7bb151a4db11d49d90e5408e4e938270f7",
-                "reference": "1b5dff7bb151a4db11d49d90e5408e4e938270f7",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/830c43a844f1f8d5b7a1f6d6076b784454d8b7ed",
+                "reference": "830c43a844f1f8d5b7a1f6d6076b784454d8b7ed",
                 "shasum": ""
             },
             "require": {
@@ -7519,7 +8145,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/environment/issues",
-                "source": "https://github.com/sebastianbergmann/environment/tree/5.1.4"
+                "source": "https://github.com/sebastianbergmann/environment/tree/5.1.5"
             },
             "funding": [
                 {
@@ -7527,7 +8153,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-03T09:37:03+00:00"
+            "time": "2023-02-03T06:03:51+00:00"
         },
         {
             "name": "sebastian/exporter",
@@ -7841,16 +8467,16 @@
         },
         {
             "name": "sebastian/recursion-context",
-            "version": "4.0.4",
+            "version": "4.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/recursion-context.git",
-                "reference": "cd9d8cf3c5804de4341c283ed787f099f5506172"
+                "reference": "e75bd0f07204fec2a0af9b0f3cfe97d05f92efc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/cd9d8cf3c5804de4341c283ed787f099f5506172",
-                "reference": "cd9d8cf3c5804de4341c283ed787f099f5506172",
+                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/e75bd0f07204fec2a0af9b0f3cfe97d05f92efc1",
+                "reference": "e75bd0f07204fec2a0af9b0f3cfe97d05f92efc1",
                 "shasum": ""
             },
             "require": {
@@ -7889,10 +8515,10 @@
                 }
             ],
             "description": "Provides functionality to recursively process PHP variables",
-            "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
+            "homepage": "https://github.com/sebastianbergmann/recursion-context",
             "support": {
                 "issues": "https://github.com/sebastianbergmann/recursion-context/issues",
-                "source": "https://github.com/sebastianbergmann/recursion-context/tree/4.0.4"
+                "source": "https://github.com/sebastianbergmann/recursion-context/tree/4.0.5"
             },
             "funding": [
                 {
@@ -7900,7 +8526,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-26T13:17:30+00:00"
+            "time": "2023-02-03T06:07:39+00:00"
         },
         {
             "name": "sebastian/resource-operations",
@@ -7959,16 +8585,16 @@
         },
         {
             "name": "sebastian/type",
-            "version": "3.2.0",
+            "version": "3.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/type.git",
-                "reference": "fb3fe09c5f0bae6bc27ef3ce933a1e0ed9464b6e"
+                "reference": "75e2c2a32f5e0b3aef905b9ed0b179b953b3d7c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/fb3fe09c5f0bae6bc27ef3ce933a1e0ed9464b6e",
-                "reference": "fb3fe09c5f0bae6bc27ef3ce933a1e0ed9464b6e",
+                "url": "https://api.github.com/repos/sebastianbergmann/type/zipball/75e2c2a32f5e0b3aef905b9ed0b179b953b3d7c7",
+                "reference": "75e2c2a32f5e0b3aef905b9ed0b179b953b3d7c7",
                 "shasum": ""
             },
             "require": {
@@ -8003,7 +8629,7 @@
             "homepage": "https://github.com/sebastianbergmann/type",
             "support": {
                 "issues": "https://github.com/sebastianbergmann/type/issues",
-                "source": "https://github.com/sebastianbergmann/type/tree/3.2.0"
+                "source": "https://github.com/sebastianbergmann/type/tree/3.2.1"
             },
             "funding": [
                 {
@@ -8011,7 +8637,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-09-12T14:47:03+00:00"
+            "time": "2023-02-03T06:13:03+00:00"
         },
         {
             "name": "sebastian/version",
@@ -8362,6 +8988,80 @@
             "time": "2023-01-03T19:28:04+00:00"
         },
         {
+            "name": "symfony/yaml",
+            "version": "v6.2.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "2bbfbdacc8a15574f8440c4838ce0d7bb6c86b19"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/2bbfbdacc8a15574f8440c4838ce0d7bb6c86b19",
+                "reference": "2bbfbdacc8a15574f8440c4838ce0d7bb6c86b19",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1",
+                "symfony/polyfill-ctype": "^1.8"
+            },
+            "conflict": {
+                "symfony/console": "<5.4"
+            },
+            "require-dev": {
+                "symfony/console": "^5.4|^6.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "bin": [
+                "Resources/bin/yaml-lint"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Loads and dumps YAML files",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/yaml/tree/v6.2.5"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-01-10T18:53:53+00:00"
+        },
+        {
             "name": "theseer/tokenizer",
             "version": "1.2.1",
             "source": {
@@ -8414,7 +9114,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "fenguoz/bsc-php": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -4,8 +4,15 @@
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/pemulungtoken/bsc-php.git"
+        }
+    ],
     "require": {
         "php": "^8.0.2",
+        "fenguoz/bsc-php": "dev-guzzle-version",
         "guzzlehttp/guzzle": "^7.2",
         "iexbase/tron-api": "^5.0",
         "laravel/framework": "^9.19",
