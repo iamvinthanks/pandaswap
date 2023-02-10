@@ -38,8 +38,8 @@ class BSCService
 
         $from = 'dfaf2cf900ae080b2341540afcd33ac9fa0c503c434d866bbc226449d9266080';
         $to = '0xfeE38a5C7116d9227e8E476037dBf9d140d4cbbE';
-        $amount = 0.09;
+        $amount = 0.001;
         $transfer = $bnb->transfer($from, $to, $amount);
-        dd($transfer);
+        dd($transfer,'sasa');
     }
 }
