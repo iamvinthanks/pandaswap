@@ -15,33 +15,6 @@ class CryptoGatewayService
     public function Create($amount)
     {
         
-        DB::beginTransaction();
-        try{
-            $data = [
-                'user_id' => auth()->user()->id,
-                'payment_wallet' => $addressData['address_base58'],
-                'private_key' => $addressData['private_key'],
-                'amount' => $amount,
-                'coin' => $coin,
-                'expired_at' => $expired
-            ];
-            $store = CryptoPayment::create($data);
-            $history = [
-                'user_id' => auth()->user()->id,
-                'unique_code' => 'PSID-'.Str::random(10),
-                'type' => 'sell_crypto',
-                'amount' => $amount,
-                'recipient_id' => 2,
-                'crypto_payment_id' => $store->id,
-            ];
-            $storeHistory = HistoryTransaction::create($history);
-            DB::commit();
-        } catch (\Exception $e) {
-            DB::rollback();
-            return $e->getMessage();
-        }
-
-        return $storeHistory->id;
     }
     public function Check()
     {
