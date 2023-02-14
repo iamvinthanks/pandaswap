@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('payment_wallet', 42)->nullable();
             $table->string('private_key', 66)->nullable();
             $table->string('amount', 100);
-            $table->enum('coin', ['TRX','USDT']);
+            $table->enum('coin', ['TRX','USDT','BNB','BUSD']);
             $table->string('paid_amount', 100)->nullable();
             $table->string('payout_tx', 66)->nullable();
             $table->enum('status', ['waiting_payment', 'completed', 'expired']);

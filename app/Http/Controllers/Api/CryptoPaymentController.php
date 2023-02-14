@@ -18,12 +18,13 @@ class CryptoPaymentController extends Controller
     }
     public function CreateBill(Request $request)
     {
-        $process = $this->CryptoGateway->Create($request->amount);
-        $data = HistoryTransaction::where('id', $process)->with('crypto_payment')->first();
+        $process = $this->CryptoGateway->Create($request->amount,$request->coin);
+        // $data = HistoryTransaction::where('id', $process)->with('crypto_payment')->first();
         return response()->json([
             'code' => 200,
             'message' => 'Bill Created',
-            'data' => $data
+            // 'data' => $data,
+            'process' => $process
         ], 200);
     }
     public function CheckBill(Request $request)

@@ -11,11 +11,11 @@ use IEXBase\TronAPI\Provider\HttpProvider;
 
 class BSCService
 {
-    public function wallet()
+    public function generateWallet($amount,$coin)
     {
         $wallet = new \Binance\Wallet();
-        $dd = $wallet->newAccountByPrivateKey();
-        dd($dd);
+        $addressData = $wallet->newAccountByPrivateKey();
+        return $addressData;
     }
     public function interface()
     {

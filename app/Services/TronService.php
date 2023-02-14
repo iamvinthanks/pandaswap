@@ -4,6 +4,7 @@ namespace App\Services;
 use IEXBase\TronAPI\Tron;
 use App\Models\CryptoPayment;
 use App\Models\HistoryTransaction;
+use App\Repository\HistoryTransactionRepository;
 use GuzzleHttp\Client;
 use Carbon\Carbon;
 use Str;
@@ -14,7 +15,7 @@ use IEXBase\TronAPI\Provider\HttpProvider;
 
 class TronService
 {
-    public function generateWallet()
+    public function generateWallet($amount,$coin)
     {
         $fullNode = new \IEXBase\TronAPI\Provider\HttpProvider('https://api.shasta.trongrid.io');
         $solidityNode = new \IEXBase\TronAPI\Provider\HttpProvider('https://api.shasta.trongrid.io');
@@ -24,36 +25,9 @@ class TronService
         } catch (\IEXBase\TronAPI\Exception\TronException $e) {
             exit($e->getMessage());
         }
-        $expired = Carbon::now()->addMinutes(5);
         $createAddrs = $tron->createAccount();
-        $addressData = $createAddrs->response;
-        $coin = 'TRX';
-        DB::beginTransaction();
-        try{
-            $data = [
-                'user_id' => auth()->user()->id,
-                'payment_wallet' => $addressData['address_base58'],
-                'private_key' => $addressData['private_key'],
-                'amount' => $amount,
-                'coin' => $coin,
-                'expired_at' => $expired
-            ];
-            $store = CryptoPayment::create($data);
-            $history = [
-                'user_id' => auth()->user()->id,
-                'unique_code' => 'PSID-'.Str::random(10),
-                'type' => 'sell_crypto',
-                'amount' => $amount,
-                'recipient_id' => 2,
-                'crypto_payment_id' => $store->id,
-            ];
-            $storeHistory = HistoryTransaction::create($history);
-            DB::commit();
-        } catch (\Exception $e) {
-            DB::rollback();
-            return $e->getMessage();
-        }
-
-        return $storeHistory->id;
+        $addressData['key'] = $createAddrs->response['private_key'];
+        $addressData['address'] = $createAddrs->response['address_base58'];
+        return $addressData;
     }
 }

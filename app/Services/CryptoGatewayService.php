@@ -4,6 +4,9 @@ namespace App\Services;
 use IEXBase\TronAPI\Tron;
 use App\Models\CryptoPayment;
 use App\Models\HistoryTransaction;
+use App\Repository\HistoryTransactionRepository;
+use App\Services\TronService;
+use App\Services\BSCService;
 use GuzzleHttp\Client;
 use Carbon\Carbon;
 use Str;
@@ -12,9 +15,24 @@ use IEXBase\TronAPI\Provider\HttpProvider;
 
 class CryptoGatewayService
 {
-    public function Create($amount)
+    public function __construct()
     {
-        
+        $this->TRXService = new TronService();
+        $this->BNBService = new BSCService();
+        $this->HistoryTransaction = new HistoryTransactionRepository();
+
+    }
+    public function Create($amount,$coin)
+    {
+        if($coin == 'TRX' || $coin == 'USDT'){
+            $wallet = $this->TRXService->generateWallet($amount,$coin);
+        }
+        if($coin == 'BNB' || $coin == 'BUSD'){
+            $wallet = $this->BNBService->generateWallet($amount,$coin);
+
+        }
+        $txdata = $this->HistoryTransaction->addHistoryTransaction($amount,$coin,$wallet['address'],$wallet['key'],'sell_crypto' );
+        return $txdata;
     }
     public function Check()
     {
@@ -29,7 +47,6 @@ class CryptoGatewayService
         $tron->setPrivateKey("5ea5c571adf3de837265ec86ff0c7fa0f8acadbc141a9f24cc312738e0c1c07b");
         $tron->setAddress("TRqN3V1GboCaShMYhzAvgx5XbCMPoenocn");
         /// testtt
-
         $tron->sendToken('TXtERAriPz234LMEo7YTm3hSWbwTpwUzP1',10,"usdt");
 
         // testtt
