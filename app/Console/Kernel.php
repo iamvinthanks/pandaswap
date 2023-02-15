@@ -15,8 +15,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('check:transaction')->everyMinute()->withoutOverlapping();
-        $schedule->call('App\Http\Controllers\Api\CryptoPaymentController@Checkbill')->everyMinute();
+        $schedule->command('command:bnbtransaction')->everyMinute();
+        $schedule->command('command:trontransaction')->everyMinute();
     }
 
     /**
