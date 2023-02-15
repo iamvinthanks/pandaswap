@@ -14,7 +14,7 @@ class HistoryTransactionRepository
     {
         DB::beginTransaction();
         try{
-            $expired = Carbon::now()->addMinutes(5);
+            $expired = Carbon::now()->addMinutes(60);
             $data = [
                 'user_id' => auth()->user()->id,
                 'payment_wallet' => $wallet,

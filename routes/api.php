@@ -21,6 +21,7 @@ Route::get('/unauthenticated', function () {
 })->name('api.unauthenticated');
 Route::post('/login', [App\Http\Controllers\Api\AuthController::class, 'login']);
 Route::post('/register', [App\Http\Controllers\Api\AuthController::class, 'register']);
+Route::post('/testcek', [App\Http\Controllers\Api\CryptoPaymentController::class, 'testcek']);
 Route::post('/crypto-payment/check', [App\Http\Controllers\Api\CryptoPaymentController::class, 'CheckBill']);
 
 Route::middleware('auth:sanctum')->group(function () {
@@ -42,3 +43,4 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/paymentprocess','App\Http\Controllers\Api\PaymentController@createpayment');
     Route::get('/reklist', 'App\Http\Controllers\Api\MemberController@NorekUser');
 });
+

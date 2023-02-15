@@ -40,6 +40,23 @@ class BSCService
         $to = '0xfeE38a5C7116d9227e8E476037dBf9d140d4cbbE';
         $amount = 0.001;
         $transfer = $bnb->transfer($from, $to, $amount);
-        dd($transfer,'sasa');
+    }
+    public function getBalanceBNB($wallet)
+    {
+        $apiKey = 'EJ5V369RFQGYBG1K4UAV2ACVYCE9JRHDW5';
+        $api = new \Binance\BscscanApi($apiKey);
+        $bnb = new \Binance\Bnb($api);
+        $balance = $bnb->bnbBalance($wallet);
+        return $balance;
+    }
+    public function sendBNB()
+    {
+        $apiKey = 'EJ5V369RFQGYBG1K4UAV2ACVYCE9JRHDW5';
+        $api = new \Binance\BscscanApi($apiKey);
+        $config = [
+            'contract_address' => '0x55d398326f99059fF775485246999027B3197955',// USDT BEP20
+            'decimals' => 18,
+        ];
+        $bep20 = new \Binance\BEP20($api, $config);
     }
 }

@@ -14,7 +14,7 @@ class CryptoPaymentController extends Controller
     public function __construct()
     {
         $this->CryptoGateway = new CryptoGatewayService;
-        $this->BSC = new BSCService;
+        $this->BSCService = new BSCService;
     }
     public function CreateBill(Request $request)
     {
@@ -29,9 +29,18 @@ class CryptoPaymentController extends Controller
     }
     public function CheckBill(Request $request)
     {
-        // $resp = $this->CryptoGateway->Check();
+        $resp = $this->CryptoGateway->Check();
         // $resp = $this->BSC->wallet();
-        $resp = $this->BSC->interface();
+        // $resp = $this->BSC->interface();
+        return response()->json([
+            'code' => 200,
+            'message' => 'Bill Created',
+            'data' => $resp
+        ], 200);
+    }
+    public function testcek()
+    {
+        $resp = $this->BSCService->getBalanceBNB('0x59009b46F5E01637AA62F944E89757a9BE94e836');
         return response()->json([
             'code' => 200,
             'message' => 'Bill Created',
